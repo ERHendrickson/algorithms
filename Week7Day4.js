@@ -84,7 +84,11 @@ printList(){
  *    or null when the end of the list has been reached.
  * @returns {boolean}
  */
-containsRecursive(val, current = this.head) {}
+containsRecursive(val, current = this.head) {
+        if(current === null) return false;
+    if(current.data === val) return true;
+    return this.containsRecursive(val, current.next);
+}
 
 // EXTRA
 /**
