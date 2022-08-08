@@ -31,10 +31,11 @@ constructor() {
  * Determines if this tree is empty.
  * @returns {boolean} Indicates if this tree is empty.
  */
-isEmpty() {
-    if(this.root == null){
-    return this.root
+isEmpty(current = this.root) {
+    if(current == null){
+    return false;
     }
+    return true;
 }
 
 /**
@@ -50,7 +51,7 @@ min(current = this.root) {
     var minval = current.left.data
     current = current.left
     }
-    return minval
+    return minval;
 }
 
 
@@ -153,10 +154,12 @@ threeLevelTree.root.right.right = new BSTNode(20);
 threeLevelTree.root.right.left = new BSTNode(13);
 threeLevelTree.print()
 
+console.log(threeLevelTree.isEmpty());
 console.log(threeLevelTree.min());
+console.log(threeLevelTree.minRecursive());
 console.log(threeLevelTree.max());
 console.log(threeLevelTree.maxRecursive());
-console.log(threeLevelTree.minRecursive());
+
 /* fullTree
                     root
                 <-- 25 -->
