@@ -32,7 +32,7 @@ size() {
     }
     return this.heap.length-1
 }
-}
+
 
 // -1 the index i think
 //array alway start at index 0 so the length
@@ -44,7 +44,7 @@ size() {
     // how can we find the size of an array?
 
 // this.heap.length()-1
-}
+
 
 /**
  * Retrieves the top (minimum number) in the heap without removing it.
@@ -112,8 +112,8 @@ printHorizontalTree(parentIdx = 1, spaceCnt = 0, spaceIncr = 10) {
 
     this.printHorizontalTree(parentIdx * 2, spaceCnt);
 }
-}
 
+}
 
 var heap = new MinHeap();
 
