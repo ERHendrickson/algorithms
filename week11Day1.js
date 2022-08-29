@@ -36,17 +36,44 @@ const bubbleSort = (nums) => {
             }
             i++;
         }
-    }
-    let g = nums.length-1;
-    let temp2 = null;
-    while(g > 0){
-        if(nums[g] < nums[g-1]){
-            temp2 = nums[g-1];
-            
+        let g = nums.length-1;
+        let temp2 = null;
+        while(g > 0){
+            if(nums[g] < nums[g-1]){
+                temp2 = nums[g-1];
+                nums[g-1] = nums[g];
+                nums[g] = temp2;
+            }
+            g--;
         }
+        if(temp1==null && temp2 == null){
+            return nums;
+        }
+        
     }
     return nums
 }
+
+const bubbleSort2 = (nums) => {
+    let unsorted = true;
+    let valsToCheck = nums.length;
+
+    while(unsorted){
+        unsorted = false;
+        for(var i = 0; i < valsToCheck; i++){
+            if(nums[i] > nums[i+1]){
+                unsorted = true;
+                let temp = nums[i]
+                nums[i] = nums[i+1]
+                nums[i+1] = temp
+            }
+        }
+        valsToCheck--;
+    }
+
+    return nums;
+}
+
 const numsRandomOrder = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
 const numsReversed = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
