@@ -88,7 +88,9 @@ const expected = ["Person One", "Person Three"];
  *    1. not practicing social distancing.
  *    2. have a friend who is not practicing social distancing whom hasCovid.
  */
-function coronaVirusAtRisk(persons) {}
+function coronaVirusAtRisk(persons) {
+    
+}
 
 /**
  * - Time: O(2n * m) -> O(n * m)  from nested loop of .findIndex.
