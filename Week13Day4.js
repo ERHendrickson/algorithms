@@ -169,7 +169,7 @@ const mergeCarts2 = (shoppingCart, wishList) => {
     }})
     return wishList
 }
-    // console.log(mergeCarts2(shoppingCart1, wishList1));
-    console.log(mergeCarts(shoppingCart2, wishList2));
+    // console.log(mergeCarts(shoppingCart1, wishList1));
+    // console.log(mergeCarts(shoppingCart2, wishList2));
     // console.log(mergeCarts(shoppingCart3, wishList3));
     // console.log(mergeCarts(shoppingCart4, wishList4));
